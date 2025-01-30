@@ -1,0 +1,30 @@
+<%- include ('../partials/header.ejs') %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to AutoHub</h1>
+            <p>View our hand-picked cars from all over the world</p>
+        <p>
+            <a class="btn btn-primary btn-large" href="/car/new">Add New Cars</a>
+        </p>
+        </div>
+    </header>
+</div>
+<div class="container">
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% cars.forEach(function(car){ %>
+            <div class="col-md-4 col-sm-6">
+                <div class="img-thumbnail">
+                    <img src=" <%= car.image %> " style="max-width: 100%;">
+                    <div id="a"class="caption">
+                        <h4><%= car.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/car/<%= car.id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% });  %>
+    </div>
+</div>
+<%- include ('../partials/footer.ejs') %>
