@@ -27,10 +27,14 @@ app.use(methodOverride("_method"))
 app.use(flash());
 // seedDB();
 
-mongoose.connect('mongodb://localhost:27017/neww',{ useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:27017/neww',{ useNewUrlParser: true });
 
-// mongoose.connect("mongodb+srv://amarsingh200021:amarsingh200021@devment-4htbk.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Ash123:BVFNKSat5jodGiyB@cluster0.qpwj7ag.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true })
 
+// mongoose.connect("mongodb+srv://abc:abc@cluster0.qxbrkjt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+// mongoose.connect("mong odb+srv://ashirwadkrchopra:Mongodb@123@cluster0.mongodb.net/@ashirwad.bvq77.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser: true}); 
+//  mongodb+srv://ashirwadkrchopra:<db_password>@ashirwad.bvq77.mongodb.net/  
+// {useNewUrlParser: true}
 
 // mongoose.connect("mongodb+srv://amarsingh200021:amarsingh200021@devment-4htbk.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
 
@@ -73,3 +77,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+
+
+
